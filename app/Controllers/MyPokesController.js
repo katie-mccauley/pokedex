@@ -30,4 +30,10 @@ export class MyPokesController {
       console.error(error)
     }
   }
+
+  setActivePoke(name) {
+    mypokesservice.setActivePoke(name)
+
+
+  }
 }

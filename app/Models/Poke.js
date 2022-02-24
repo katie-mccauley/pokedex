@@ -29,8 +29,8 @@ export class Poke {
     return `
     <div class="rounded  p-2">
         <b class="text-center w-100">${this.name}</b><br/>
-        <input onclick="app.mySpellsController.prepareSpell('${this.name}')">
-        <button class="btn selectable" onclick="app.mySpellsController.setActiveSpell('${this.name}')"> see details</button>
+        <input type="checkbox" onclick="app.mySpellsController.prepareSpell('${this.name}')">
+        <button class="btn selectable" onclick="app.mypokesController.setActivePoke('${this.name}')"> see details</button>
       <div class="border border-light mt-2"></div>
     </div>`
   }

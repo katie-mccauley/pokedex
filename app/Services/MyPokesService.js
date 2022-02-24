@@ -3,6 +3,10 @@ import { Poke } from "../Models/Poke.js"
 import { myApi } from "./AxiosService.js"
 
 class MyPokesService {
+  setActivePoke(name) {
+    let poke = ProxyState.myPokes.find(p => p.name == name)
+    ProxyState.activePoke = poke
+  }
   async getMyPokes() {
     const res = await myApi.get()
     ProxyState.myPokes = res.data.map(d => new Poke(d))
